@@ -1,0 +1,29 @@
+.movieCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 560px) {
+    .movieCard {
+        padding: 4rem;
+    }
+}
+
+.imgCard {
+    width: 300px;
+    height: auto;
+    background-color: aliceblue;
+    border-radius: 1rem;
+}
+
+@media (max-width: 560px) {
+    .imgCard {
+        width: 100%;
+    }
+}
+
+.description {
+    font-size: 2rem;
+}
