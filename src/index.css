@@ -1,3 +1,8 @@
+  :root {
+    --white: #f3f3f3;
+    --black: #000;
+  }
+
   html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -19,11 +24,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   background-color: #232323;
-  color: #f3f3f3;
+  color: var(--white);
 } 
 
 a {
   text-decoration: none;
+  color: var(--white);
 }
 
 li {
