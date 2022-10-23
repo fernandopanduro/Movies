@@ -20,6 +20,10 @@
     border-radius: 1rem;
 }
 
+.styles.movie {
+    display: flex;
+}
+
 @media (max-width: 468px) {
     .imgDetails {
         border-radius: 0;

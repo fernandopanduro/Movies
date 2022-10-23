@@ -1,26 +1,39 @@
-import movie from '../Movie.json';
 import styles from '../css/MovieDetails.module.css'
 import { get } from '../utils/httmpClient';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { Spinner } from '../components/Spinner';
+import { Search } from '../components/Search';
+import { getMovieImg } from '../utils/getMovieImg';
+
 
 
 export function MovieDetails() {
     const {movieId} = useParams();
     const [movie, setMovie] = useState(null)
+    const [isLoading, setIsLoading] = useState(true);
+
     useEffect(() => {
+        setIsLoading(true);
+
         get('/movie/' + movieId).then(data => {
-            setMovie(data)
+            setMovie(data);
+            setIsLoading(false);
         })
     }, [movieId])
 
-    if (!movie) {
-        return null;    
+    if (isLoading) {
+        return <Spinner />
+    }
+
+    if (isLoading) {
+        return <Spinner />;    
     }
 
 
-    const imgURL = 'https://image.tmdb.org/t/p/w500' + movie.poster_path;
-    return (
+    const imgURL = getMovieImg(movie.poster_path, 500);
+    return (<div>
+        <Search />
         <main className={styles.movieDetails + " " + styles.col}>
             <img
             src={imgURL} 
@@ -35,5 +48,7 @@ export function MovieDetails() {
                 
             </section>
         </main>
+    </div>
+
     );
 }
