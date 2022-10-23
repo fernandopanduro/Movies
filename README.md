@@ -1,10 +1,12 @@
 
-<h1 align="center"> 📽️ Peli 📽️ </h1>
+<h1 align="center"> 📽️ Peliculiando 📽️ </h1>
 
 <p align="center"> 🎬 Website de Peliculas integrando una API que nuestras las peliculas en tendencia para poder disfrutarlas con 🍿 </p> 
 
 
-https://user-images.githubusercontent.com/92656447/197395279-b2cca806-3f14-4f2f-8dd5-1c286cd92884.mp4
+
+https://user-images.githubusercontent.com/92656447/197402256-2203853c-ca13-48cf-809c-794fa98f3f42.mp4
+
 
 
 ## 🛠️ Construido 
